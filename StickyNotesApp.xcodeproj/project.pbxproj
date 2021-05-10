@@ -11,6 +11,7 @@
 		45163ED9264977A300A96E13 /* StorageServiceEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45163ED7264977A300A96E13 /* StorageServiceEngine.cpp */; };
 		45163EDB264977E100A96E13 /* StorageService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45163EDA264977E100A96E13 /* StorageService.mm */; };
 		45163EE926497C8F00A96E13 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 45163EE826497C8F00A96E13 /* Note.m */; };
+		45163EF026498C0B00A96E13 /* DataConvertible.m in Sources */ = {isa = PBXBuildFile; fileRef = 45163EEF26498C0B00A96E13 /* DataConvertible.m */; };
 		4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC6D264973F0002929C6 /* AppDelegate.m */; };
 		4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC70264973F0002929C6 /* SceneDelegate.m */; };
 		4530AC74264973F0002929C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC73264973F0002929C6 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 		45163EDC264977FE00A96E13 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		45163EE726497C8F00A96E13 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		45163EE826497C8F00A96E13 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		45163EEE26498C0B00A96E13 /* DataConvertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataConvertible.h; sourceTree = "<group>"; };
+		45163EEF26498C0B00A96E13 /* DataConvertible.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataConvertible.m; sourceTree = "<group>"; };
 		4530AC69264973F0002929C6 /* StickyNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4530AC6C264973F0002929C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4530AC6D264973F0002929C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			children = (
 				45163EE726497C8F00A96E13 /* Note.h */,
 				45163EE826497C8F00A96E13 /* Note.m */,
+				45163EEE26498C0B00A96E13 /* DataConvertible.h */,
+				45163EEF26498C0B00A96E13 /* DataConvertible.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				45163ED52649776100A96E13 /* StorableItem.cpp in Sources */,
 				4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */,
 				45163EE926497C8F00A96E13 /* Note.m in Sources */,
+				45163EF026498C0B00A96E13 /* DataConvertible.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

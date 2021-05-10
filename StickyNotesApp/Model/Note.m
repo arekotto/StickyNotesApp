@@ -9,20 +9,16 @@
 
 @implementation Note
 
-- (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    self.title = [coder decodeObjectForKey:@"title"];
-    self.text = [coder decodeObjectForKey:@"text"];
-    
-    return self;
+@synthesize title;
+@synthesize text;
+
+-(NSDictionary *)toDictionary {
+    return [self dictionaryWithValuesForKeys:@[@"title", @"text"]];
+//    return [NSDictionary dictionaryWithObjectsAndKeys:self.title,@"title",self.text,@"text", nil];
 }
 
-- (void)encodeWithCoder:(nonnull NSCoder *)coder {
-    // todo
+- (NSData *)toData {
+    return [NSJSONSerialization dataWithJSONObject:[self toDictionary] options:NSJSONWritingPrettyPrinted error:nil];
 }
 
 @end
