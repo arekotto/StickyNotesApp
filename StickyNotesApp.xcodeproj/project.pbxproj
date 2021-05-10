@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC6D264973F0002929C6 /* AppDelegate.m */; };
+		4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC70264973F0002929C6 /* SceneDelegate.m */; };
+		4530AC74264973F0002929C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC73264973F0002929C6 /* ViewController.m */; };
+		4530AC77264973F0002929C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC75264973F0002929C6 /* Main.storyboard */; };
+		4530AC79264973F2002929C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC78264973F2002929C6 /* Assets.xcassets */; };
+		4530AC7C264973F2002929C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */; };
+		4530AC7F264973F2002929C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC7E264973F2002929C6 /* main.m */; };
+		4530AC89264973F2002929C6 /* StickyNotesAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC88264973F2002929C6 /* StickyNotesAppTests.m */; };
+		4530AC94264973F2002929C6 /* StickyNotesAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4530AC85264973F2002929C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4530AC61264973F0002929C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4530AC68264973F0002929C6;
+			remoteInfo = StickyNotesApp;
+		};
+		4530AC90264973F2002929C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4530AC61264973F0002929C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4530AC68264973F0002929C6;
+			remoteInfo = StickyNotesApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4530AC69264973F0002929C6 /* StickyNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4530AC6C264973F0002929C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4530AC6D264973F0002929C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4530AC6F264973F0002929C6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		4530AC70264973F0002929C6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		4530AC72264973F0002929C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4530AC73264973F0002929C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4530AC76264973F0002929C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4530AC78264973F2002929C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4530AC7B264973F2002929C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4530AC7D264973F2002929C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4530AC7E264973F2002929C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4530AC84264973F2002929C6 /* StickyNotesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyNotesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4530AC88264973F2002929C6 /* StickyNotesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickyNotesAppTests.m; sourceTree = "<group>"; };
+		4530AC8A264973F2002929C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4530AC8F264973F2002929C6 /* StickyNotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyNotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickyNotesAppUITests.m; sourceTree = "<group>"; };
+		4530AC95264973F2002929C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4530AC66264973F0002929C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC81264973F2002929C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC8C264973F2002929C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4530AC60264973F0002929C6 = {
+			isa = PBXGroup;
+			children = (
+				4530AC6B264973F0002929C6 /* StickyNotesApp */,
+				4530AC87264973F2002929C6 /* StickyNotesAppTests */,
+				4530AC92264973F2002929C6 /* StickyNotesAppUITests */,
+				4530AC6A264973F0002929C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4530AC6A264973F0002929C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4530AC69264973F0002929C6 /* StickyNotesApp.app */,
+				4530AC84264973F2002929C6 /* StickyNotesAppTests.xctest */,
+				4530AC8F264973F2002929C6 /* StickyNotesAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4530AC6B264973F0002929C6 /* StickyNotesApp */ = {
+			isa = PBXGroup;
+			children = (
+				4530ACA12649759F002929C6 /* UI */,
+				4530AC6C264973F0002929C6 /* AppDelegate.h */,
+				4530AC6D264973F0002929C6 /* AppDelegate.m */,
+				4530AC6F264973F0002929C6 /* SceneDelegate.h */,
+				4530AC70264973F0002929C6 /* SceneDelegate.m */,
+				4530AC75264973F0002929C6 /* Main.storyboard */,
+				4530AC78264973F2002929C6 /* Assets.xcassets */,
+				4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */,
+				4530AC7D264973F2002929C6 /* Info.plist */,
+				4530AC7E264973F2002929C6 /* main.m */,
+			);
+			path = StickyNotesApp;
+			sourceTree = "<group>";
+		};
+		4530AC87264973F2002929C6 /* StickyNotesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4530AC88264973F2002929C6 /* StickyNotesAppTests.m */,
+				4530AC8A264973F2002929C6 /* Info.plist */,
+			);
+			path = StickyNotesAppTests;
+			sourceTree = "<group>";
+		};
+		4530AC92264973F2002929C6 /* StickyNotesAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */,
+				4530AC95264973F2002929C6 /* Info.plist */,
+			);
+			path = StickyNotesAppUITests;
+			sourceTree = "<group>";
+		};
+		4530ACA12649759F002929C6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4530AC72264973F0002929C6 /* ViewController.h */,
+				4530AC73264973F0002929C6 /* ViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4530AC68264973F0002929C6 /* StickyNotesApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4530AC98264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesApp" */;
+			buildPhases = (
+				4530AC65264973F0002929C6 /* Sources */,
+				4530AC66264973F0002929C6 /* Frameworks */,
+				4530AC67264973F0002929C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickyNotesApp;
+			productName = StickyNotesApp;
+			productReference = 4530AC69264973F0002929C6 /* StickyNotesApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4530AC83264973F2002929C6 /* StickyNotesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4530AC9B264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesAppTests" */;
+			buildPhases = (
+				4530AC80264973F2002929C6 /* Sources */,
+				4530AC81264973F2002929C6 /* Frameworks */,
+				4530AC82264973F2002929C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4530AC86264973F2002929C6 /* PBXTargetDependency */,
+			);
+			name = StickyNotesAppTests;
+			productName = StickyNotesAppTests;
+			productReference = 4530AC84264973F2002929C6 /* StickyNotesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4530AC8E264973F2002929C6 /* StickyNotesAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4530AC9E264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesAppUITests" */;
+			buildPhases = (
+				4530AC8B264973F2002929C6 /* Sources */,
+				4530AC8C264973F2002929C6 /* Frameworks */,
+				4530AC8D264973F2002929C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4530AC91264973F2002929C6 /* PBXTargetDependency */,
+			);
+			name = StickyNotesAppUITests;
+			productName = StickyNotesAppUITests;
+			productReference = 4530AC8F264973F2002929C6 /* StickyNotesAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4530AC61264973F0002929C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4530AC68264973F0002929C6 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					4530AC83264973F2002929C6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4530AC68264973F0002929C6;
+					};
+					4530AC8E264973F2002929C6 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4530AC68264973F0002929C6;
+					};
+				};
+			};
+			buildConfigurationList = 4530AC64264973F0002929C6 /* Build configuration list for PBXProject "StickyNotesApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4530AC60264973F0002929C6;
+			productRefGroup = 4530AC6A264973F0002929C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4530AC68264973F0002929C6 /* StickyNotesApp */,
+				4530AC83264973F2002929C6 /* StickyNotesAppTests */,
+				4530AC8E264973F2002929C6 /* StickyNotesAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4530AC67264973F0002929C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4530AC7C264973F2002929C6 /* LaunchScreen.storyboard in Resources */,
+				4530AC79264973F2002929C6 /* Assets.xcassets in Resources */,
+				4530AC77264973F0002929C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC82264973F2002929C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC8D264973F2002929C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4530AC65264973F0002929C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4530AC74264973F0002929C6 /* ViewController.m in Sources */,
+				4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */,
+				4530AC7F264973F2002929C6 /* main.m in Sources */,
+				4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC80264973F2002929C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4530AC89264973F2002929C6 /* StickyNotesAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4530AC8B264973F2002929C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4530AC94264973F2002929C6 /* StickyNotesAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4530AC86264973F2002929C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4530AC68264973F0002929C6 /* StickyNotesApp */;
+			targetProxy = 4530AC85264973F2002929C6 /* PBXContainerItemProxy */;
+		};
+		4530AC91264973F2002929C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4530AC68264973F0002929C6 /* StickyNotesApp */;
+			targetProxy = 4530AC90264973F2002929C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4530AC75264973F0002929C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4530AC76264973F0002929C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4530AC7B264973F2002929C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4530AC96264973F2002929C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4530AC97264973F2002929C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4530AC99264973F2002929C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4530AC9A264973F2002929C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4530AC9C264973F2002929C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StickyNotesApp.app/StickyNotesApp";
+			};
+			name = Debug;
+		};
+		4530AC9D264973F2002929C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StickyNotesApp.app/StickyNotesApp";
+			};
+			name = Release;
+		};
+		4530AC9F264973F2002929C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StickyNotesApp;
+			};
+			name = Debug;
+		};
+		4530ACA0264973F2002929C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPP2CVKY6B;
+				INFOPLIST_FILE = StickyNotesAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.StickyNotesAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StickyNotesApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4530AC64264973F0002929C6 /* Build configuration list for PBXProject "StickyNotesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4530AC96264973F2002929C6 /* Debug */,
+				4530AC97264973F2002929C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4530AC98264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4530AC99264973F2002929C6 /* Debug */,
+				4530AC9A264973F2002929C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4530AC9B264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4530AC9C264973F2002929C6 /* Debug */,
+				4530AC9D264973F2002929C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4530AC9E264973F2002929C6 /* Build configuration list for PBXNativeTarget "StickyNotesAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4530AC9F264973F2002929C6 /* Debug */,
+				4530ACA0264973F2002929C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4530AC61264973F0002929C6 /* Project object */;
+}
