@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45163ED52649776100A96E13 /* StorableItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45163ED32649776100A96E13 /* StorableItem.cpp */; };
+		45163ED9264977A300A96E13 /* StorageServiceEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45163ED7264977A300A96E13 /* StorageServiceEngine.cpp */; };
+		45163EDB264977E100A96E13 /* StorageService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45163EDA264977E100A96E13 /* StorageService.mm */; };
+		45163EE926497C8F00A96E13 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 45163EE826497C8F00A96E13 /* Note.m */; };
 		4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC6D264973F0002929C6 /* AppDelegate.m */; };
 		4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC70264973F0002929C6 /* SceneDelegate.m */; };
 		4530AC74264973F0002929C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC73264973F0002929C6 /* ViewController.m */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45163ED32649776100A96E13 /* StorableItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StorableItem.cpp; sourceTree = "<group>"; };
+		45163ED42649776100A96E13 /* StorableItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StorableItem.hpp; sourceTree = "<group>"; };
+		45163ED7264977A300A96E13 /* StorageServiceEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StorageServiceEngine.cpp; sourceTree = "<group>"; };
+		45163ED8264977A300A96E13 /* StorageServiceEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StorageServiceEngine.hpp; sourceTree = "<group>"; };
+		45163EDA264977E100A96E13 /* StorageService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StorageService.mm; sourceTree = "<group>"; };
+		45163EDC264977FE00A96E13 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
+		45163EE726497C8F00A96E13 /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		45163EE826497C8F00A96E13 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		4530AC69264973F0002929C6 /* StickyNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4530AC6C264973F0002929C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4530AC6D264973F0002929C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +93,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45163ED02649768C00A96E13 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				45163ED22649775100A96E13 /* StorageService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		45163ED12649769C00A96E13 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4530AC75264973F0002929C6 /* Main.storyboard */,
+				4530AC78264973F2002929C6 /* Assets.xcassets */,
+				4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */,
+				4530AC7D264973F2002929C6 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		45163ED22649775100A96E13 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				45163ED62649779500A96E13 /* Engine */,
+				45163ED32649776100A96E13 /* StorableItem.cpp */,
+				45163ED42649776100A96E13 /* StorableItem.hpp */,
+				45163EDA264977E100A96E13 /* StorageService.mm */,
+				45163EDC264977FE00A96E13 /* StorageService.h */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
+		45163ED62649779500A96E13 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				45163ED7264977A300A96E13 /* StorageServiceEngine.cpp */,
+				45163ED8264977A300A96E13 /* StorageServiceEngine.hpp */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		45163EDD26497BDB00A96E13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45163EE726497C8F00A96E13 /* Note.h */,
+				45163EE826497C8F00A96E13 /* Note.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4530AC60264973F0002929C6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +165,14 @@
 		4530AC6B264973F0002929C6 /* StickyNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				45163EDD26497BDB00A96E13 /* Model */,
+				45163ED12649769C00A96E13 /* Resource */,
+				45163ED02649768C00A96E13 /* Service */,
 				4530ACA12649759F002929C6 /* UI */,
 				4530AC6C264973F0002929C6 /* AppDelegate.h */,
 				4530AC6D264973F0002929C6 /* AppDelegate.m */,
 				4530AC6F264973F0002929C6 /* SceneDelegate.h */,
 				4530AC70264973F0002929C6 /* SceneDelegate.m */,
-				4530AC75264973F0002929C6 /* Main.storyboard */,
-				4530AC78264973F2002929C6 /* Assets.xcassets */,
-				4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */,
-				4530AC7D264973F2002929C6 /* Info.plist */,
 				4530AC7E264973F2002929C6 /* main.m */,
 			);
 			path = StickyNotesApp;
@@ -274,10 +334,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45163EDB264977E100A96E13 /* StorageService.mm in Sources */,
 				4530AC74264973F0002929C6 /* ViewController.m in Sources */,
+				45163ED9264977A300A96E13 /* StorageServiceEngine.cpp in Sources */,
 				4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */,
 				4530AC7F264973F2002929C6 /* main.m in Sources */,
+				45163ED52649776100A96E13 /* StorableItem.cpp in Sources */,
 				4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */,
+				45163EE926497C8F00A96E13 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPP2CVKY6B;
-				INFOPLIST_FILE = StickyNotesApp/Info.plist;
+				INFOPLIST_FILE = StickyNotesApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +533,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPP2CVKY6B;
-				INFOPLIST_FILE = StickyNotesApp/Info.plist;
+				INFOPLIST_FILE = StickyNotesApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
