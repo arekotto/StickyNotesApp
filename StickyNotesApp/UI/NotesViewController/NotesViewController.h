@@ -8,9 +8,9 @@
 #import <UIKit/UIKit.h>
 #import "AppViewController.h"
 #import "NotesView.h"
+#import "NotesViewModel.h"
 
-@interface NotesViewController : AppViewController<NotesView *>
-
+@interface NotesViewController : AppViewController<NotesView *, NotesViewModel *>
 
 @end
 

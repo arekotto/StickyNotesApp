@@ -7,12 +7,16 @@
 
 #import <UIKit/UIKit.h>
 #import "AppView.h"
+#import "AppViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppViewController<T: AppView *> : UIViewController
+@interface AppViewController<T: AppView *, V: AppViewModel *> : UIViewController
+
+- (id) initWithViewModel:(V)viewModel;
 
 @property (strong, nonatomic) T contentView;
+@property (strong, nonatomic) V viewModel;
 
 - (T)makeView;
 
