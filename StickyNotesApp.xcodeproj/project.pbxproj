@@ -14,13 +14,16 @@
 		45163EF026498C0B00A96E13 /* DataConvertible.m in Sources */ = {isa = PBXBuildFile; fileRef = 45163EEF26498C0B00A96E13 /* DataConvertible.m */; };
 		4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC6D264973F0002929C6 /* AppDelegate.m */; };
 		4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC70264973F0002929C6 /* SceneDelegate.m */; };
-		4530AC74264973F0002929C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC73264973F0002929C6 /* ViewController.m */; };
+		4530AC74264973F0002929C6 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC73264973F0002929C6 /* NotesViewController.m */; };
 		4530AC77264973F0002929C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC75264973F0002929C6 /* Main.storyboard */; };
 		4530AC79264973F2002929C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC78264973F2002929C6 /* Assets.xcassets */; };
 		4530AC7C264973F2002929C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530AC7A264973F2002929C6 /* LaunchScreen.storyboard */; };
 		4530AC7F264973F2002929C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC7E264973F2002929C6 /* main.m */; };
 		4530AC89264973F2002929C6 /* StickyNotesAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC88264973F2002929C6 /* StickyNotesAppTests.m */; };
 		4530AC94264973F2002929C6 /* StickyNotesAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */; };
+		455FF99A2652CD3800EB3F7C /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FF9992652CD3800EB3F7C /* AppViewController.m */; };
+		45D8907B264A73AB0000CDD4 /* NotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8907A264A73AB0000CDD4 /* NotesView.m */; };
+		45D8907E264A7BA30000CDD4 /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8907D264A7BA30000CDD4 /* AppView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +59,8 @@
 		4530AC6D264973F0002929C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4530AC6F264973F0002929C6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		4530AC70264973F0002929C6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		4530AC72264973F0002929C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4530AC73264973F0002929C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4530AC72264973F0002929C6 /* NotesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
+		4530AC73264973F0002929C6 /* NotesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		4530AC76264973F0002929C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4530AC78264973F2002929C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4530AC7B264973F2002929C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +72,12 @@
 		4530AC8F264973F2002929C6 /* StickyNotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyNotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickyNotesAppUITests.m; sourceTree = "<group>"; };
 		4530AC95264973F2002929C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455FF9982652CD3800EB3F7C /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		455FF9992652CD3800EB3F7C /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		45D89079264A73AB0000CDD4 /* NotesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesView.h; sourceTree = "<group>"; };
+		45D8907A264A73AB0000CDD4 /* NotesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesView.m; sourceTree = "<group>"; };
+		45D8907C264A7BA30000CDD4 /* AppView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
+		45D8907D264A7BA30000CDD4 /* AppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +213,14 @@
 		4530ACA12649759F002929C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4530AC72264973F0002929C6 /* ViewController.h */,
-				4530AC73264973F0002929C6 /* ViewController.m */,
+				4530AC72264973F0002929C6 /* NotesViewController.h */,
+				4530AC73264973F0002929C6 /* NotesViewController.m */,
+				45D89079264A73AB0000CDD4 /* NotesView.h */,
+				45D8907A264A73AB0000CDD4 /* NotesView.m */,
+				45D8907C264A7BA30000CDD4 /* AppView.h */,
+				45D8907D264A7BA30000CDD4 /* AppView.m */,
+				455FF9982652CD3800EB3F7C /* AppViewController.h */,
+				455FF9992652CD3800EB3F7C /* AppViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -340,13 +355,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				45163EDB264977E100A96E13 /* StorageService.mm in Sources */,
-				4530AC74264973F0002929C6 /* ViewController.m in Sources */,
+				4530AC74264973F0002929C6 /* NotesViewController.m in Sources */,
 				45163ED9264977A300A96E13 /* StorageServiceEngine.cpp in Sources */,
 				4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */,
 				4530AC7F264973F2002929C6 /* main.m in Sources */,
 				45163ED52649776100A96E13 /* StorableItem.cpp in Sources */,
 				4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */,
 				45163EE926497C8F00A96E13 /* Note.m in Sources */,
+				45D8907E264A7BA30000CDD4 /* AppView.m in Sources */,
+				45D8907B264A73AB0000CDD4 /* NotesView.m in Sources */,
+				455FF99A2652CD3800EB3F7C /* AppViewController.m in Sources */,
 				45163EF026498C0B00A96E13 /* DataConvertible.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

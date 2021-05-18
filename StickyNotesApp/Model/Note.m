@@ -14,7 +14,6 @@
 
 -(NSDictionary *)toDictionary {
     return [self dictionaryWithValuesForKeys:@[@"title", @"text"]];
-//    return [NSDictionary dictionaryWithObjectsAndKeys:self.title,@"title",self.text,@"text", nil];
 }
 
 - (NSData *)toData {

@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Note : DataConvertible
 
-@property NSString *title;
-@property NSString *text;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *text;
 
 @end
 
