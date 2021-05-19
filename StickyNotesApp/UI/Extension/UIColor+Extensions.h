@@ -1,19 +1,22 @@
 //
-//  NotesCell.h
+//  UIColor+Extensions.h
 //  StickyNotesApp
 //
 //  Created by Arek Otto on 18/05/2021.
 //
 
 #import <UIKit/UIKit.h>
-#import "AppCollectionViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NotesCell : AppCollectionViewCell
+@interface UIColor (Hex)
 
-@property (nonatomic) UITextView * textView;
++ (UIColor *)colorFromHexString:(NSString *)hexString;
+
+- (NSString *)toHexString;
 
 @end
+
+
 
 NS_ASSUME_NONNULL_END

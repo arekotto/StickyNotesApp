@@ -16,9 +16,11 @@
 @implementation SceneDelegate
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    NotesViewModel * vm = [[NotesViewModel alloc] init];
-    NotesViewController * rootVC = [[NotesViewController alloc] initWithViewModel:vm];
-    [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:rootVC]];
+    NotesViewModel * const vm = [[NotesViewModel alloc] init];
+    NotesViewController * const rootVC = [[NotesViewController alloc] initWithViewModel:vm];
+    UINavigationController * const navC = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    navC.navigationBar.prefersLargeTitles = YES;
+    [self.window setRootViewController:navC];
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {

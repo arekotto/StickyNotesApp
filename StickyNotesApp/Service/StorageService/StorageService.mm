@@ -9,9 +9,10 @@
 #import "StorageService.h"
 #import "StorageServiceEngine.hpp"
 
-@interface StorageService ()
-
-@property (nonatomic, readonly) StorageServiceEngine* engine;
+@interface StorageService () {
+    
+    StorageServiceEngine * engine;
+}
 
 @end
 
@@ -23,15 +24,31 @@
 }
 
 - (instancetype)init {
-    _engine = new StorageServiceEngine();
+    engine = new StorageServiceEngine();
     self = [super init];
     return self;
 }
 
 - (NSData *)getItem:(NSString *)uid {
     const char * utf8Id = [uid UTF8String];
-    std::string dataRaw = _engine->getItem(std::string(utf8Id));
-    return [StorageService rawStringToNSData:dataRaw.c_str()];
+    const char * dataRaw = engine->getItem(std::string(utf8Id));
+    return [StorageService rawStringToNSData:dataRaw];
+}
+
+- (NSArray<NSData *> *)getAllItems {
+    NSMutableArray<NSData *> * allItems = [[NSMutableArray alloc] init];
+    const char ** dataRaw = engine->getAllItems();
+    const char ** currentItem = dataRaw;
+    for ( ; *currentItem != NULL; currentItem++ ) {
+        [allItems addObject:[StorageService rawStringToNSData:*currentItem]];
+    }
+//    strlen("");
+//    auto size = strlen(dataRaw);
+//    for (int idx=0; idx<size; ++idx) {
+//        const char* itemData = dataRaw[idx];
+//        [allItems addObject:[StorageService rawStringToNSData:itemData]];
+//    }
+    return allItems;
 }
 
 - (NSString *)insertItem:(NSData *)data {
@@ -42,11 +59,11 @@
 
 - (void)insertItem:(NSData *)data withId:(NSString *)uid {
     NSString * dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    _engine->insertItem([dataStr UTF8String], std::string([uid UTF8String]));
+    engine->insertItem([dataStr UTF8String], std::string([uid UTF8String]));
 }
 
 - (void)removeItem:(NSString *)uid {
-    _engine->removeItem(std::string([uid UTF8String]));
+    engine->removeItem(std::string([uid UTF8String]));
 }
 
 @end

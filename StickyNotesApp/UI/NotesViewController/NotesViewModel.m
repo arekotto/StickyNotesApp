@@ -10,9 +10,7 @@
 #import "StorageService.h"
 
 @interface NotesViewModel () {
-    
     StorageService * storageService;
-    NSMutableArray<Note *> * _notes;
 }
 
 @end
@@ -23,28 +21,25 @@
 {
     self = [super init];
     if (self) {
-        _notes = [[NSMutableArray<Note *> alloc] init];
         storageService = [[StorageService alloc] init];
-
-        for (int i = 0; i < 5; i++) {
-            Note * note = [[Note alloc] init];
-            note.title = @"TODO";
-            note.text = @"This is a very important note";
-            [_notes addObject:note];
-        }
-
-//            NSString * uid = [storageService insertItem:[note toData]];
-//
-//            NSData * fetchedNoteData = [storageService getItem:uid];
-//
-//            Note * fetchedNote = [[Note alloc] initFromData:fetchedNoteData];
-//            NSLog(@"%@", fetchedNote.title);
     }
     return self;
 }
 
 - (NSArray<Note *> *)notes {
-    NSLog(@"%@", @"yaaaaay");
-    return _notes;
+    NSMutableArray * notes = [[NSMutableArray alloc] init];
+    for(NSData * data in [storageService getAllItems]) {
+        Note * note = [[Note alloc] initFromData:data];
+        [notes addObject:note];
+    }
+    return notes;
+}
+
+- (void)addNewNote {
+    Note * note = [[Note alloc] init];
+    note.title = @"";
+    note.text = @"";
+    [note setRandomColor];
+    [storageService insertItem:[note toData]];
 }
 @end

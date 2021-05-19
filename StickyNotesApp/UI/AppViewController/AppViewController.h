@@ -13,12 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppViewController<T: AppView *, V: AppViewModel *> : UIViewController
 
-- (id) initWithViewModel:(V)viewModel;
-
 @property (strong, nonatomic) T contentView;
 @property (strong, nonatomic) V viewModel;
 
-- (T)makeView;
+- (nonnull T)makeView;
 
 @end
 

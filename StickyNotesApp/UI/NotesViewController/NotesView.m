@@ -12,11 +12,22 @@
 + (UICollectionView *)makeCollectionView {
     UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat itemSize = UIScreen.mainScreen.bounds.size.width / 2;
-    flowLayout.itemSize = CGSizeMake(itemSize - 5, itemSize - 5);
+    flowLayout.itemSize = CGSizeMake(itemSize, itemSize);
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.minimumLineSpacing = 0;
     UICollectionView * this = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-    this.translatesAutoresizingMaskIntoConstraints = false;
+    this.translatesAutoresizingMaskIntoConstraints = NO;
     this.backgroundColor = UIColor.clearColor;
+    this.contentInset = UIEdgeInsetsMake(16, 0, 0, 0);
+    this.alwaysBounceVertical = YES;
+    this.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     return this;
+}
+
+- (void)configureSelf {
+    [super configureSelf];
+    
+    self.backgroundColor = UIColor.whiteColor;
 }
 
 - (void)configureSubviews {
@@ -34,7 +45,5 @@
         [self.collectionView.trailingAnchor constraintEqualToAnchor: self.trailingAnchor]
     ]];
 }
-
-
 
 @end

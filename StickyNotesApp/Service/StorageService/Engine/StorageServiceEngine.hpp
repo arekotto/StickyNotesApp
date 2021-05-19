@@ -16,6 +16,7 @@ class StorageServiceEngine {
     std::vector<StorableItem *> database;
 public:
     const char * getItem(std::string uid);
+    const char ** getAllItems();
     void insertItem(const char * data, std::string uid);
     void removeItem(std::string uid);
 };

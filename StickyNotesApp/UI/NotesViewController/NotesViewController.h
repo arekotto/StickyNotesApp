@@ -12,5 +12,7 @@
 
 @interface NotesViewController : AppViewController<NotesView *, NotesViewModel *>
 
+- (instancetype)initWithViewModel:(NotesViewModel *)viewModel;
+
 @end
 

@@ -13,15 +13,7 @@
 
 @implementation AppViewController
 
-- (id)initWithViewModel:(AppViewModel *)viewModel {
-    self = [super init];
-    if (self) {
-        self.viewModel = viewModel;
-    }
-    return self;
-}
-
-- (id)makeView {
+- (nonnull id)makeView {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)] userInfo:nil];
 }
 

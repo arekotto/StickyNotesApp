@@ -13,6 +13,7 @@
 @interface StorageService : NSObject
 
 - (nullable NSData *)getItem:(NSString * _Nonnull)uid;
+- (nonnull NSArray<NSData *> *)getAllItems;
 - (nonnull NSString *)insertItem:(nonnull NSData *)data;
 - (void)insertItem:(nonnull NSData *)data withId:(nonnull NSString *)uid;
 - (void)removeItem:(nonnull NSString *)uid;

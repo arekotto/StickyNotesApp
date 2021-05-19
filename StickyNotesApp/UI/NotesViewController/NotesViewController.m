@@ -9,58 +9,43 @@
 #import "StorageService.h"
 #import "Note.h"
 #import "NotesView.h"
-#import "NotesCell.h"
+#import "NoteCell.h"
+#import "NotesViewController+UICollectionViewDataSource.h"
 
-@interface NotesViewController () <UICollectionViewDelegate>
+@interface NotesViewController ()
 
 @end
 
 @implementation NotesViewController
 
--(id)makeView {
+- (nonnull instancetype)initWithViewModel:(NotesViewModel *)viewModel {
+    self = [super init];
+    if (self) {
+        self.viewModel = viewModel;
+    }
+    return self;
+}
+
+-(NotesView *)makeView {
     return [[NotesView alloc] init];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.contentView.collectionView.delegate = self;
-    self.contentView.collectionView.dataSource = self;
-    [self.contentView.collectionView registerClass:[NotesCell class] forCellWithReuseIdentifier:@"notesCell"];
-    self.view.backgroundColor = UIColor.lightGrayColor;
-}
-
-@end
-
-// MARK: - UICollectionViewDelegate
-
-@interface NotesViewController (UICollectionViewDelegate) <UICollectionViewDelegate>
-
-@end
-
-@implementation NotesViewController (UICollectionViewDelegate)
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.navigationItem.title = NSLocalizedString(@"Notes", @"");
+    UIBarButtonItem * newNoteButton = [UIBarButtonItem alloc];
+    newNoteButton = [newNoteButton initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newNote)];
+    [self.navigationItem setRightBarButtonItem:newNoteButton];
     
+    self.contentView.collectionView.dataSource = self;
+    [self.contentView.collectionView registerClass:[NoteCell class] forCellWithReuseIdentifier:@"notesCell"];
+}
+
+- (void)newNote {
+    [self.viewModel addNewNote];
+    [self.contentView.collectionView reloadData];
 }
 
 @end
 
-// MARK: - UICollectionViewDataSource
-
-@interface NotesViewController (UICollectionViewDataSource) <UICollectionViewDataSource>
-
-@end
-
-@implementation NotesViewController (UICollectionViewDataSource)
-
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return [collectionView dequeueReusableCellWithReuseIdentifier:@"notesCell" forIndexPath:indexPath];
-}
-
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSArray * notes = self.viewModel.notes;
-    return self.viewModel.notes.count;
-}
-
-@end
