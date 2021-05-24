@@ -17,7 +17,9 @@ class StorageServiceEngine {
 public:
     const char * getItem(std::string uid);
     const char ** getAllItems();
+    const char ** getAllItemIDs();
     void insertItem(const char * data, std::string uid);
+    void updateItem(const char * data, std::string uid);
     void removeItem(std::string uid);
 };
 

@@ -6,6 +6,7 @@
 //
 
 #import "NotesViewController.h"
+#import "NotesViewController+NoteCellDelegate.h"
 #import "NoteCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,12 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation NotesViewController (UICollectionViewDataSource)
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.viewModel.notes.count;
+    return self.viewModel.numberOfNotes;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NoteCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"notesCell" forIndexPath:indexPath];
-    [cell configureWithNote: self.viewModel.notes[indexPath.item]];
+    [cell setNote: [self.viewModel noteAtIndexPath:indexPath] ];
+    cell.delegate = self;
     return cell;
 }
 

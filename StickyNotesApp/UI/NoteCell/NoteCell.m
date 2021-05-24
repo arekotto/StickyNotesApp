@@ -7,9 +7,10 @@
 
 #import "NoteCell.h"
 
-@interface NoteCell () <UITextFieldDelegate>
+@interface NoteCell () <UITextFieldDelegate, UITextViewDelegate>
     
 @property (nonatomic) UIStackView * mainStackView;
+@property (nonatomic) Note * note;
 
 @end
 
@@ -49,9 +50,11 @@
 
     self.titleTextField = [NoteCell makeTitleTextField];
     self.titleTextField.delegate = self;
+    [self.titleTextField addTarget:self action:@selector(titleTextFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.mainStackView addArrangedSubview:self.titleTextField];
     
     self.bodyTextView = [NoteCell makeBodyTextView];
+    self.bodyTextView.delegate = self;
     [self.mainStackView addArrangedSubview:self.bodyTextView];
 }
 
@@ -67,7 +70,9 @@
     ]];
 }
 
-- (void)configureWithNote:(Note *)note {
+- (void)setNote:(Note *)note {
+    _note = note;
+    _titleTextField.text = note.title;
     _bodyTextView.text = note.text;
     _mainStackView.backgroundColor = note.color;
 }
@@ -75,6 +80,16 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.bodyTextView becomeFirstResponder];
     return YES;
+}
+
+- (void)titleTextFieldDidChange:(UITextField *)textField {
+    _note.title = textField.text;
+    [_delegate noteCell:self didUpdateNote:_note];
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    _note.text = textView.text;
+    [_delegate noteCell:self didUpdateNote:_note];
 }
 
 @end

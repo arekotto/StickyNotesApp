@@ -77,6 +77,8 @@
 		4530AC8F264973F2002929C6 /* StickyNotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyNotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickyNotesAppUITests.m; sourceTree = "<group>"; };
 		4530AC95264973F2002929C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453192C8265ADA0300451A93 /* NoteCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteCellDelegate.h; sourceTree = "<group>"; };
+		453192C9265AE12F00451A93 /* NotesViewController+NoteCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotesViewController+NoteCellDelegate.h"; sourceTree = "<group>"; };
 		4551512326544DD700D9C65E /* NotesViewController+UICollectionViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotesViewController+UICollectionViewDataSource.h"; sourceTree = "<group>"; };
 		4551512526546C1000D9C65E /* UIColor+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		4551512626546EC800D9C65E /* UIColor+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
@@ -229,11 +231,22 @@
 		4530ACA12649759F002929C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				453192C7265AD9E300451A93 /* NoteCell */,
 				4551512426546BF100D9C65E /* Extension */,
 				45D442B92654236000AFE1AD /* AppViewController */,
 				45D442B82654234800AFE1AD /* NotesViewController */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		453192C7265AD9E300451A93 /* NoteCell */ = {
+			isa = PBXGroup;
+			children = (
+				45D442C026542A3800AFE1AD /* NoteCell.h */,
+				45D442C126542A3800AFE1AD /* NoteCell.m */,
+				453192C8265ADA0300451A93 /* NoteCellDelegate.h */,
+			);
+			path = NoteCell;
 			sourceTree = "<group>";
 		};
 		4551512426546BF100D9C65E /* Extension */ = {
@@ -251,12 +264,11 @@
 				4530AC72264973F0002929C6 /* NotesViewController.h */,
 				4530AC73264973F0002929C6 /* NotesViewController.m */,
 				4551512326544DD700D9C65E /* NotesViewController+UICollectionViewDataSource.h */,
+				453192C9265AE12F00451A93 /* NotesViewController+NoteCellDelegate.h */,
 				45D89079264A73AB0000CDD4 /* NotesView.h */,
 				45D8907A264A73AB0000CDD4 /* NotesView.m */,
 				45D442BA2654272F00AFE1AD /* NotesViewModel.h */,
 				45D442BB2654272F00AFE1AD /* NotesViewModel.m */,
-				45D442C026542A3800AFE1AD /* NoteCell.h */,
-				45D442C126542A3800AFE1AD /* NoteCell.m */,
 			);
 			path = NotesViewController;
 			sourceTree = "<group>";

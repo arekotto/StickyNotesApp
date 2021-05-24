@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "AppCollectionViewCell.h"
 #import "Note.h"
+#import "NoteCellDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) UITextView * bodyTextView;
 @property (nonatomic) UITextField * titleTextField;
 
-- (void)configureWithNote:(nonnull Note *)note;
+@property (nonatomic, weak) id <NoteCellDelegate> delegate;
+
+- (void)setNote:(nonnull Note *)note;
 
 @end
 

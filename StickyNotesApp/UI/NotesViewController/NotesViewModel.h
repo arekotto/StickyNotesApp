@@ -13,10 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NotesViewModel : AppViewModel
 
-@property (nonatomic, readonly) NSArray<Note *> * notes;
+@property (nonatomic, readonly) NSUInteger numberOfNotes;
 
 - (void)addNewNote;
-
+- (Note *)noteAtIndexPath:(NSIndexPath *)indexPath;
+- (void)updateNote:(Note *)note;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,7 +10,6 @@
 #import "StorageServiceEngine.hpp"
 
 @interface StorageService () {
-    
     StorageServiceEngine * engine;
 }
 
@@ -42,13 +41,17 @@
     for ( ; *currentItem != NULL; currentItem++ ) {
         [allItems addObject:[StorageService rawStringToNSData:*currentItem]];
     }
-//    strlen("");
-//    auto size = strlen(dataRaw);
-//    for (int idx=0; idx<size; ++idx) {
-//        const char* itemData = dataRaw[idx];
-//        [allItems addObject:[StorageService rawStringToNSData:itemData]];
-//    }
     return allItems;
+}
+
+- (NSArray<NSString *> *)getAllItemIDs {
+    NSMutableArray<NSString *> * allIDs = [[NSMutableArray alloc] init];
+    const char ** dataRaw = engine->getAllItemIDs();
+    const char ** currentID = dataRaw;
+    for ( ; *currentID != NULL; currentID++ ) {
+        [allIDs addObject: [NSString stringWithUTF8String:*currentID]];
+    }
+    return allIDs;
 }
 
 - (NSString *)insertItem:(NSData *)data {
@@ -60,6 +63,11 @@
 - (void)insertItem:(NSData *)data withId:(NSString *)uid {
     NSString * dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     engine->insertItem([dataStr UTF8String], std::string([uid UTF8String]));
+}
+
+- (void)updateItem:(NSData *)data withID:(NSString *)uid {
+    NSString * dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    engine->updateItem([dataStr UTF8String], std::string([uid UTF8String]));
 }
 
 - (void)removeItem:(NSString *)uid {

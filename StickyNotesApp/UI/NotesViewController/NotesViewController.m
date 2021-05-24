@@ -11,6 +11,7 @@
 #import "NotesView.h"
 #import "NoteCell.h"
 #import "NotesViewController+UICollectionViewDataSource.h"
+#import "NotesViewController+NoteCellDelegate.h"
 
 @interface NotesViewController ()
 

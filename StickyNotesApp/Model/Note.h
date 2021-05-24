@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Note : DataConvertible
 
+@property (nonatomic) NSString * noteID;
 @property (nonatomic) NSString * title;
 @property (nonatomic) NSString * text;
 @property (nonatomic) NSString * colorHex;

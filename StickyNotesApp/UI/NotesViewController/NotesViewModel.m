@@ -9,9 +9,10 @@
 #import "Note.h"
 #import "StorageService.h"
 
-@interface NotesViewModel () {
-    StorageService * storageService;
-}
+@interface NotesViewModel ()
+
+@property (nonatomic, readonly) StorageService * storageService;
+@property (nonatomic, readonly) NSArray<NSString *> * itemIDs;
 
 @end
 
@@ -21,14 +22,18 @@
 {
     self = [super init];
     if (self) {
-        storageService = [[StorageService alloc] init];
+        _storageService = [[StorageService alloc] init];
     }
     return self;
 }
 
+- (NSUInteger)numberOfNotes {
+    return [_storageService getAllItemIDs].count;
+}
+
 - (NSArray<Note *> *)notes {
     NSMutableArray * notes = [[NSMutableArray alloc] init];
-    for(NSData * data in [storageService getAllItems]) {
+    for(NSData * data in [_storageService getAllItems]) {
         Note * note = [[Note alloc] initFromData:data];
         [notes addObject:note];
     }
@@ -40,6 +45,24 @@
     note.title = @"";
     note.text = @"";
     [note setRandomColor];
-    [storageService insertItem:[note toData]];
+    [_storageService insertItem:[note toData]];
 }
+
+- (void)refreshItems {
+    _itemIDs = [_storageService getAllItemIDs];
+}
+
+- (Note *)noteAtIndexPath:(NSIndexPath *)indexPath {
+    NSString * itemID = [_storageService getAllItemIDs][indexPath.item];
+    NSData * itemData = [_storageService getItem:itemID];
+    Note * note = [[Note alloc] initFromData:itemData];
+    note.noteID = itemID;
+    NSLog(@"%ld - %@", indexPath.item, note.title);
+    return note;
+}
+
+- (void)updateNote:(Note *)note {
+    [_storageService updateItem:[note toData] withID:note.noteID];
+}
+
 @end
