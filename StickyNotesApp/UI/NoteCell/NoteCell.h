@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) UITextView * bodyTextView;
 @property (nonatomic) UITextField * titleTextField;
+@property (nonatomic) UIButton * deleteButton;
+@property (nonatomic) BOOL allowsNoteDelete;
 
 @property (nonatomic, weak) id <NoteCellDelegate> delegate;
 

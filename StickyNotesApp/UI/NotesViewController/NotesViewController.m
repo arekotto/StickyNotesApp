@@ -15,6 +15,9 @@
 
 @interface NotesViewController ()
 
+@property (nonatomic) UIBarButtonItem * beginDeletingNotesButton;
+@property (nonatomic) UIBarButtonItem * endDeletingNotesButton;
+
 @end
 
 @implementation NotesViewController
@@ -35,9 +38,15 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSLocalizedString(@"Notes", @"");
+    
     UIBarButtonItem * newNoteButton = [UIBarButtonItem alloc];
     newNoteButton = [newNoteButton initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newNote)];
     [self.navigationItem setRightBarButtonItem:newNoteButton];
+    
+    self.beginDeletingNotesButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(beginDeletingNotesButtonTapped:)];
+    [self.navigationItem setLeftBarButtonItem:self.beginDeletingNotesButton];
+    
+    self.endDeletingNotesButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(endDeletingNotesButtonTapped:)];
     
     self.contentView.collectionView.dataSource = self;
     [self.contentView.collectionView registerClass:[NoteCell class] forCellWithReuseIdentifier:@"notesCell"];
@@ -48,5 +57,16 @@
     [self.contentView.collectionView reloadData];
 }
 
+- (void)beginDeletingNotesButtonTapped:(UIBarButtonItem *) button {
+    self.viewModel.allowsNoteDelete = YES;
+    [self.contentView.collectionView reloadData];
+    [self.navigationItem setLeftBarButtonItem:self.endDeletingNotesButton animated:YES];
+}
+
+- (void)endDeletingNotesButtonTapped:(UIBarButtonItem *) button {
+    self.viewModel.allowsNoteDelete = NO;
+    [self.contentView.collectionView reloadData];
+    [self.navigationItem setLeftBarButtonItem:self.beginDeletingNotesButton animated:YES];
+}
 @end
 

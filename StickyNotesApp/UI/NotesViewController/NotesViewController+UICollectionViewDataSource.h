@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NoteCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"notesCell" forIndexPath:indexPath];
     [cell setNote: [self.viewModel noteAtIndexPath:indexPath] ];
+    cell.allowsNoteDelete = self.viewModel.allowsNoteDelete;
     cell.delegate = self;
     return cell;
 }

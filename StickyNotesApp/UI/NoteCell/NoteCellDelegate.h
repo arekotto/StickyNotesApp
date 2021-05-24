@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol NoteCellDelegate <NSObject>
 
 - (void)noteCell:(id)noteCell didUpdateNote:(Note *)updatedNote;
+- (void)noteCell:(id)noteCell didDeleteNote:(Note *)deletedNote;
 
 @end
 

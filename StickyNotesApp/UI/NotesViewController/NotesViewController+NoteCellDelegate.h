@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
     [self.viewModel updateNote:updatedNote];
 }
 
+- (void)noteCell:(id)noteCell didDeleteNote:(Note *)deletedNote {
+    [self.viewModel deleteNote:deletedNote];
+    [self.contentView.collectionView reloadData];
+}
+
 @end
 
 NS_ASSUME_NONNULL_END

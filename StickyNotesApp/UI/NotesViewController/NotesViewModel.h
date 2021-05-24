@@ -13,11 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NotesViewModel : AppViewModel
 
+@property (nonatomic) BOOL allowsNoteDelete;
 @property (nonatomic, readonly) NSUInteger numberOfNotes;
 
 - (void)addNewNote;
 - (Note *)noteAtIndexPath:(NSIndexPath *)indexPath;
 - (void)updateNote:(Note *)note;
+- (void)deleteNote:(Note *)note;
 @end
 
 NS_ASSUME_NONNULL_END
