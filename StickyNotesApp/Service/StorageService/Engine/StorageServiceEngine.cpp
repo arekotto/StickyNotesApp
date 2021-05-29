@@ -48,16 +48,17 @@ void StorageServiceEngine::insertItem(const char * data, std::string uid) {
 }
 
 void StorageServiceEngine::updateItem(const char *data, std::string uid) {
-    auto copiedData = new std::string(data);
     for (int i = 0; i < database.size(); i++) {
         if (database[i]->id == uid) {
+            auto copiedData = new std::string(data);
             database[i]->data = (* copiedData).c_str();
+            return;
         }
     }
 }
 
 void StorageServiceEngine::removeItem(std::string uid) {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < database.size(); i++) {
         auto item = database[i];
         if (item->id == uid) {
             database.erase(database.begin() + i);
