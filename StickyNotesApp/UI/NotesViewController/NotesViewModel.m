@@ -23,6 +23,7 @@
     self = [super init];
     if (self) {
         _storageService = [[StorageService alloc] init];
+        [_storageService loadItems];
         _allowsNoteDelete = NO;
     }
     return self;
@@ -68,6 +69,10 @@
 
 - (void)deleteNote:(Note *)note {
     [_storageService removeItem:note.noteID];
+}
+
+- (void)saveNotes {
+    [_storageService saveItems];
 }
 
 @end

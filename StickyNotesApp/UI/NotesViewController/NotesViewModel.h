@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (Note *)noteAtIndexPath:(NSIndexPath *)indexPath;
 - (void)updateNote:(Note *)note;
 - (void)deleteNote:(Note *)note;
+- (void)saveNotes;
 @end
 
 NS_ASSUME_NONNULL_END

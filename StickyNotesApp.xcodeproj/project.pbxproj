@@ -23,6 +23,7 @@
 		4530AC94264973F2002929C6 /* StickyNotesAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530AC93264973F2002929C6 /* StickyNotesAppUITests.m */; };
 		4551512726546EC800D9C65E /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4551512626546EC800D9C65E /* UIColor+Extensions.m */; };
 		455FF99A2652CD3800EB3F7C /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FF9992652CD3800EB3F7C /* AppViewController.m */; };
+		45A68A742662399D00A05821 /* StorableItemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45A68A722662399D00A05821 /* StorableItemUtils.cpp */; };
 		45D442BC2654272F00AFE1AD /* NotesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D442BB2654272F00AFE1AD /* NotesViewModel.m */; };
 		45D442BF2654276900AFE1AD /* AppViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D442BE2654276900AFE1AD /* AppViewModel.m */; };
 		45D442C226542A3800AFE1AD /* NoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D442C126542A3800AFE1AD /* NoteCell.m */; };
@@ -84,6 +85,8 @@
 		4551512626546EC800D9C65E /* UIColor+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		455FF9982652CD3800EB3F7C /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		455FF9992652CD3800EB3F7C /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		45A68A722662399D00A05821 /* StorableItemUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StorableItemUtils.cpp; sourceTree = "<group>"; };
+		45A68A732662399D00A05821 /* StorableItemUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StorableItemUtils.hpp; sourceTree = "<group>"; };
 		45D442BA2654272F00AFE1AD /* NotesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesViewModel.h; sourceTree = "<group>"; };
 		45D442BB2654272F00AFE1AD /* NotesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesViewModel.m; sourceTree = "<group>"; };
 		45D442BD2654276900AFE1AD /* AppViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewModel.h; sourceTree = "<group>"; };
@@ -145,9 +148,8 @@
 		45163ED22649775100A96E13 /* StorageService */ = {
 			isa = PBXGroup;
 			children = (
+				45A68A752662943600A05821 /* StorableItem */,
 				45163ED62649779500A96E13 /* Engine */,
-				45163ED32649776100A96E13 /* StorableItem.cpp */,
-				45163ED42649776100A96E13 /* StorableItem.hpp */,
 				45163EDA264977E100A96E13 /* StorageService.mm */,
 				45163EDC264977FE00A96E13 /* StorageService.h */,
 			);
@@ -256,6 +258,17 @@
 				4551512626546EC800D9C65E /* UIColor+Extensions.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		45A68A752662943600A05821 /* StorableItem */ = {
+			isa = PBXGroup;
+			children = (
+				45163ED32649776100A96E13 /* StorableItem.cpp */,
+				45163ED42649776100A96E13 /* StorableItem.hpp */,
+				45A68A722662399D00A05821 /* StorableItemUtils.cpp */,
+				45A68A732662399D00A05821 /* StorableItemUtils.hpp */,
+			);
+			path = StorableItem;
 			sourceTree = "<group>";
 		};
 		45D442B82654234800AFE1AD /* NotesViewController */ = {
@@ -421,6 +434,7 @@
 				4530AC74264973F0002929C6 /* NotesViewController.m in Sources */,
 				45163ED9264977A300A96E13 /* StorageServiceEngine.cpp in Sources */,
 				4530AC6E264973F0002929C6 /* AppDelegate.m in Sources */,
+				45A68A742662399D00A05821 /* StorableItemUtils.cpp in Sources */,
 				4530AC7F264973F2002929C6 /* main.m in Sources */,
 				45163ED52649776100A96E13 /* StorableItem.cpp in Sources */,
 				4530AC71264973F0002929C6 /* SceneDelegate.m in Sources */,

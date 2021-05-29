@@ -13,6 +13,8 @@
 #include "StorableItem.hpp"
 
 class StorageServiceEngine {
+    static const std::string databaseFileName;
+    static std::string databasePath();
     std::vector<StorableItem *> database;
 public:
     const char * getItem(std::string uid);
@@ -21,6 +23,8 @@ public:
     void insertItem(const char * data, std::string uid);
     void updateItem(const char * data, std::string uid);
     void removeItem(std::string uid);
+    void save();
+    void load();
 };
 
 #endif /* StorageService_hpp */

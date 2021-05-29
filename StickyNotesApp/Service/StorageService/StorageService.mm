@@ -74,4 +74,12 @@
     engine->removeItem(std::string([uid UTF8String]));
 }
 
+- (void)saveItems {
+    engine->save();
+}
+
+- (void)loadItems {
+    engine->load();
+}
+
 @end

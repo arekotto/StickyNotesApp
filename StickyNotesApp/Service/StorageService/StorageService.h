@@ -19,7 +19,8 @@
 - (void)updateItem:(nonnull NSData *)data withID:(nonnull NSString *)uid;
 - (void)insertItem:(nonnull NSData *)data withId:(nonnull NSString *)uid;
 - (void)removeItem:(nonnull NSString *)uid;
-
+- (void)saveItems;
+- (void)loadItems;
 @end
 
 #endif /* StorageService_h */

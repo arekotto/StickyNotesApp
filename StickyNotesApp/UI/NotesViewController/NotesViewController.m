@@ -68,5 +68,9 @@
     [self.contentView.collectionView reloadData];
     [self.navigationItem setLeftBarButtonItem:self.beginDeletingNotesButton animated:YES];
 }
+
+- (void)save {
+    [self.viewModel saveNotes];
+}
 @end
 

@@ -6,10 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NotesViewController.h"
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 
-@property (strong, nonatomic) UIWindow * window;
+@property (nullable, strong, nonatomic) UIWindow * window;
+@property (nullable, readonly, strong, nonatomic) NotesViewController * noteViewController;
 
 @end
 

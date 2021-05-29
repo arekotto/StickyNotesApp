@@ -13,6 +13,7 @@
 @interface NotesViewController : AppViewController<NotesView *, NotesViewModel *>
 
 - (instancetype)initWithViewModel:(NotesViewModel *)viewModel;
+- (void)save;
 
 @end
 

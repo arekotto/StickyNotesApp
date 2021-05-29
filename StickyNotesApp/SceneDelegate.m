@@ -15,6 +15,11 @@
 
 @implementation SceneDelegate
 
+- (NotesViewController *)noteViewController {
+    UINavigationController * const navC = (UINavigationController *) self.window.rootViewController;
+    return (NotesViewController *) navC.childViewControllers.firstObject;
+}
+
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     NotesViewModel * const vm = [[NotesViewModel alloc] init];
     NotesViewController * const rootVC = [[NotesViewController alloc] initWithViewModel:vm];
@@ -23,11 +28,12 @@
     [self.window setRootViewController:navC];
 }
 
-- (void)sceneDidDisconnect:(UIScene *)scene {
-    // Called as the scene is being released by the system.
-    // This occurs shortly after the scene enters the background, or when its session is discarded.
-    // Release any resources associated with this scene that can be re-created the next time the scene connects.
-    // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+- (void)sceneDidEnterBackground:(UIScene *)scene {
+    [self.noteViewController save];
+}
+
+- (void)sceneWillResignActive:(UIScene *)scene {
+    [self.noteViewController save];
 }
 
 @end

@@ -6,6 +6,10 @@
 //
 
 #include "StorageServiceEngine.hpp"
+#include "StorableItemUtils.hpp"
+#include <fstream>
+
+const std::string StorageServiceEngine::databaseFileName = "db.txt";
 
 const char * StorageServiceEngine::getItem(std::string uid) {
     for (auto item: database) {
@@ -67,3 +71,36 @@ void StorageServiceEngine::removeItem(std::string uid) {
         }
     }
 }
+
+std::string StorageServiceEngine::databasePath() {
+    char buffer[256];
+    strcpy(buffer, getenv("HOME"));
+    strcat(buffer, "/Documents/");
+    strcat(buffer, databaseFileName.c_str());
+    return std::string(buffer);
+}
+
+std::istream& operator>> (std::istream & stream, StorableItem & item) {
+    return StorableItemUtils::getItem(stream, item);
+}
+
+void StorageServiceEngine::save() {
+    auto fullPath = databasePath();
+    std::ofstream file(fullPath);
+    for (const StorableItem * item : database) {
+        StorableItemUtils::putItem(file, *item);
+        file << '\n';
+    }
+}
+
+void StorageServiceEngine::load() {
+    database.clear();
+    auto fullPath = databasePath();
+    std::ifstream file(fullPath);
+    StorableItem tempItem;
+    while (file >> tempItem) {
+        StorableItem * item = new StorableItem(tempItem);
+        database.push_back(item);
+    }
+}
+
