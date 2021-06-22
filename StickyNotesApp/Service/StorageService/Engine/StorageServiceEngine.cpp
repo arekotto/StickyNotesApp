@@ -83,6 +83,10 @@ void StorageServiceEngine::save() {
 
 void StorageServiceEngine::load() {
     database.clear();
+    for (auto item : database) {
+        delete item;
+        item = nullptr;
+    }
     auto fullPath = databasePath();
     std::ifstream file(fullPath);
     StorableItem tempItem;

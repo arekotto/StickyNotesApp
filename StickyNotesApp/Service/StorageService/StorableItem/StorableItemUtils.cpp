@@ -19,8 +19,7 @@ std::istream& StorableItemUtils::getItem(std::istream & stream, StorableItem & i
         std::istringstream stringStream(line);
         std::string data;
         if (stringStream >> item.id >> data) {
-            auto decodedData = new std::string(base64_decode(data));
-            item.data = (*decodedData).c_str();
+            item.data = std::string(base64_decode(data));
             return stream;
         }
     }

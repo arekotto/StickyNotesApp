@@ -33,7 +33,10 @@
     if (item == nullptr) {
         return nil;
     }
-    return [StorageService rawStringToNSData:*item];
+    NSData * itemData = [StorageService rawStringToNSData:*item];
+    delete item;
+    item = nullptr;
+    return itemData;
 }
 
 - (NSArray<NSData *> *)getAllItems {
