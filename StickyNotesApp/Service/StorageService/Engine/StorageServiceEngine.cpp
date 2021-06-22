@@ -9,7 +9,7 @@
 #include "StorableItemUtils.hpp"
 #include <fstream>
 
-const std::string StorageServiceEngine::databaseFileName = "db.txt";
+static std::string_view databaseFileName{"db.txt"};
 
 const char * StorageServiceEngine::getItem(std::string uid) {
     for (auto item: database) {
@@ -67,17 +67,16 @@ void StorageServiceEngine::removeItem(std::string uid) {
         if (item->id == uid) {
             database.erase(database.begin() + i);
             delete item;
+            item = nullptr;
             return;
         }
     }
 }
 
 std::string StorageServiceEngine::databasePath() {
-    char buffer[256];
-    strcpy(buffer, getenv("HOME"));
-    strcat(buffer, "/Documents/");
-    strcat(buffer, databaseFileName.c_str());
-    return std::string(buffer);
+    std::string env(getenv("HOME"));
+    std::string folder = "/Documents/";
+    return env + folder + std::string{databaseFileName};
 }
 
 std::istream& operator>> (std::istream & stream, StorableItem & item) {

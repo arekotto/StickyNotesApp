@@ -13,7 +13,6 @@
 #include "StorableItem.hpp"
 
 class StorageServiceEngine {
-    static const std::string databaseFileName;
     static std::string databasePath();
     std::vector<StorableItem *> database;
 public:
