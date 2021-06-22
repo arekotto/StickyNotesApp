@@ -9,11 +9,11 @@
 #include <sstream>
 #include <vector>
 
-std::ostream& StorableItemUtils::putItem(std::ostream & stream, const StorableItem & item){
+std::ostream & StorableItemUtils::putItem(std::ostream & stream, const StorableItem & item) {
     return stream << item.id << ' ' << base64_encode(item.data);
 }
 
-std::istream& StorableItemUtils::getItem(std::istream & stream, StorableItem & item) {
+std::istream & StorableItemUtils::getItem(std::istream & stream, StorableItem & item) {
     std::string line;
     if (std::getline(stream >> std::ws, line)) {
         std::istringstream stringStream(line);
@@ -30,7 +30,7 @@ std::istream& StorableItemUtils::getItem(std::istream & stream, StorableItem & i
 
 // MARK: - helpers
 
-std::string StorableItemUtils::base64_encode(const std::string &in) {
+std::string StorableItemUtils::base64_encode(const std::string & in) {
     
     std::string out;
     
@@ -48,7 +48,7 @@ std::string StorableItemUtils::base64_encode(const std::string &in) {
     return out;
 }
 
-std::string StorableItemUtils::base64_decode(const std::string &in) {
+std::string StorableItemUtils::base64_decode(const std::string & in) {
     
     std::string out;
     
