@@ -16,11 +16,11 @@ class StorageServiceEngine {
     static std::string databasePath();
     std::vector<StorableItem *> database;
 public:
-    const char * getItem(std::string uid);
-    const char ** getAllItems();
-    const char ** getAllItemIDs();
-    void insertItem(const char * data, std::string uid);
-    void updateItem(const char * data, std::string uid);
+    std::string * getItem(std::string uid);
+    std::vector<std::string> getAllItems();
+    std::vector<std::string> getAllItemIDs();
+    void insertItem(std::string data, std::string uid);
+    void updateItem(std::string data, std::string uid);
     void removeItem(std::string uid);
     void save();
     void load();

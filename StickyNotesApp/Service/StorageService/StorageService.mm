@@ -17,8 +17,8 @@
 
 @implementation StorageService
 
-+ (NSData *)rawStringToNSData:(const char *)string {
-    NSString * dataString = [NSString stringWithUTF8String:string];
++ (NSData *)rawStringToNSData:(std::string)string {
+    NSString * dataString = [NSString stringWithUTF8String:string.c_str()];
     return [dataString dataUsingEncoding:NSUTF8StringEncoding];
 }
 
@@ -29,27 +29,25 @@
 }
 
 - (NSData *)getItem:(NSString *)uid {
-    const char * utf8Id = [uid UTF8String];
-    const char * dataRaw = engine->getItem(std::string(utf8Id));
-    return [StorageService rawStringToNSData:dataRaw];
+    auto * item = engine->getItem(std::string([uid UTF8String]));
+    if (item == nullptr) {
+        return nil;
+    }
+    return [StorageService rawStringToNSData:*item];
 }
 
 - (NSArray<NSData *> *)getAllItems {
     NSMutableArray<NSData *> * allItems = [[NSMutableArray alloc] init];
-    const char ** dataRaw = engine->getAllItems();
-    const char ** currentItem = dataRaw;
-    for ( ; *currentItem != NULL; currentItem++ ) {
-        [allItems addObject:[StorageService rawStringToNSData:*currentItem]];
+    for (auto item : engine->getAllItems()) {
+        [allItems addObject:[StorageService rawStringToNSData:item]];
     }
     return allItems;
 }
 
 - (NSArray<NSString *> *)getAllItemIDs {
     NSMutableArray<NSString *> * allIDs = [[NSMutableArray alloc] init];
-    const char ** dataRaw = engine->getAllItemIDs();
-    const char ** currentID = dataRaw;
-    for ( ; *currentID != NULL; currentID++ ) {
-        [allIDs addObject: [NSString stringWithUTF8String:*currentID]];
+    for (auto itemID : engine->getAllItemIDs()) {
+        [allIDs addObject: [NSString stringWithUTF8String:itemID.c_str()]];
     }
     return allIDs;
 }

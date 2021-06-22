@@ -11,51 +11,40 @@
 
 static std::string_view databaseFileName{"db.txt"};
 
-const char * StorageServiceEngine::getItem(std::string uid) {
+std::string * StorageServiceEngine::getItem(std::string uid) {
     for (auto item: database) {
         if (item->id == uid) {
-            auto copiedData = new std::string(item->data);
-            return (* copiedData).c_str();
+            return new std::string(item->data);
         }
     }
     return nullptr;
 }
 
-const char ** StorageServiceEngine::getAllItems() {
-    auto numberOfItems = database.size();
-    const char ** items = new const char * [numberOfItems + 1];
-    int i = 0;
-    for ( ; i < numberOfItems; i++) {
-        auto copiedData = new std::string(database[i]->data);
-        items[i] = (* copiedData).c_str();
+std::vector<std::string> StorageServiceEngine::getAllItems() {
+    std::vector<std::string> itemIDs;
+    for (auto item : database) {
+        itemIDs.push_back(item->data);
     }
-    items[i] = NULL;
-    return items;
+    return itemIDs;
 }
 
-const char ** StorageServiceEngine::getAllItemIDs() {
-    auto numberOfItems = database.size();
-    const char ** items = new const char * [numberOfItems + 1];
-    int i = 0;
-    for ( ; i < numberOfItems; i++) {
-        auto copiedData = new std::string(database[i]->id);
-        items[i] = (* copiedData).c_str();
+std::vector<std::string> StorageServiceEngine::getAllItemIDs() {
+    std::vector<std::string> itemIDs;
+    for (auto item : database) {
+        itemIDs.push_back(item->id);
     }
-    items[i] = NULL;
-    return items;
+    return itemIDs;
 }
 
-void StorageServiceEngine::insertItem(const char * data, std::string uid) {
-    auto copiedData = new std::string(data);
-    auto * item = new StorableItem { uid, (* copiedData).c_str() };
+void StorageServiceEngine::insertItem(std::string data, std::string uid) {
+    auto * item = new StorableItem { uid, data };
     database.push_back(item);
 }
 
-void StorageServiceEngine::updateItem(const char *data, std::string uid) {
+void StorageServiceEngine::updateItem(std::string data, std::string uid) {
     for (int i = 0; i < database.size(); i++) {
         if (database[i]->id == uid) {
-            auto copiedData = new std::string(data);
-            database[i]->data = (* copiedData).c_str();
+            database[i]->data = data;
             return;
         }
     }

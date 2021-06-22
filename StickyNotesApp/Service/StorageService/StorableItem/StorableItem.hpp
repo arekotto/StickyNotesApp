@@ -13,7 +13,7 @@
 
 typedef struct {
     std::string id;
-    const char * data;
+    std::string data;
 } StorableItem;
 
 #endif /* StorableItem_hpp */
